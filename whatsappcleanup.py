@@ -10,7 +10,7 @@ def msg_cleaner(msg):
 
 
 csv_data = [] #[[sender, msg]]
-raw_txt= open('gc_data.txt', 'r', encoding="utf8")
+raw_txt= open('data_format.txt', 'r', encoding="utf8")
 c = 0
 
 for line in raw_txt:
@@ -36,7 +36,7 @@ for line in raw_txt:
 #end
 
 #acctualy write the file
-with open('gc_data.csv', 'w', newline='', encoding='utf') as file:
+with open('data_out.csv', 'w', newline='', encoding='utf') as file:
     writer = csv.writer(file, delimiter=',')
     b=0 
     for row in csv_data:
